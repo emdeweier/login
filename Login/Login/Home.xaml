@@ -1,0 +1,20 @@
+﻿<Window x:Class="Login.Home"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Login"
+        mc:Ignorable="d"
+        Title="Home" Height="400" Width="600" WindowStyle="None" ResizeMode="NoResize">
+    <Grid Background="#FFBDCEC4">
+        <Rectangle Fill="#FF2a2b20" HorizontalAlignment="Center" Height="50" Margin="0,0,0,0" VerticalAlignment="Top" Width="600" Stroke="#FF2A2b20"/>
+        <Rectangle Fill="#FF9EC5A3" HorizontalAlignment="Left" Height="350" Margin="0,50,0,0" VerticalAlignment="Top" Width="170" Stroke="#FF9EC5A3"/>
+        <Button Content="LOGOUT" Name="BTN_Logout" HorizontalAlignment="Center" Margin="480,10,10,360" Foreground="White" VerticalAlignment="Center" Width="110" Height="30" FontSize="16" BorderBrush="{x:Null}" Background="{x:Null}"/>
+        <Button Content="ADD DATA" Name="BTN_Add_Data" HorizontalAlignment="Center" Margin="28,130,465,240" Background="#FF3B3C20" Foreground="White" VerticalAlignment="Center" Width="110" Height="30" FontSize="16" BorderBrush="{x:Null}" Click="BTN_Add_Data_Click"/>
+        <DataGrid HorizontalAlignment="Center" Height="300" Margin="185,55,15,0" VerticalAlignment="Center" Width="400" VerticalContentAlignment="Center" Name="User_Form" SelectionMode="Single" ItemsSource="{MultiBinding}">
+            <DataGrid.Columns>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBlock HorizontalAlignment="Left" Margin="50,350,0,0" TextWrapping="Wrap" Text="#bapaknyajono" VerticalAlignment="Center" FontSize="10" FontWeight="Medium"/>
+    </Grid>
+</Window>
