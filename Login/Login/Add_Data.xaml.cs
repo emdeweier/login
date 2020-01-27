@@ -1,19 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using System.Configuration;
 using System.Data.SqlClient;
-
+using Dapper;
 namespace Login
 {
     /// <summary>
@@ -21,17 +11,56 @@ namespace Login
     /// </summary>
     public partial class Add_Data : Window
     {
+        public string Role { get; private set; }
+        public string User { get; private set; }
+
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
-        public Add_Data()
+        public Add_Data(string RoleVal, string UserVal)
         {
+            Role = RoleVal;
+            User = UserVal;
             InitializeComponent();
+            if (Role == "admin")
+            {
+                BTN_Add_Data.Visibility = Visibility.Visible;
+                BTN_MngData.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                BTN_Add_Data.Visibility = Visibility.Hidden;
+                BTN_MngData.Visibility = Visibility.Hidden;
+            }
         }
 
-        //private void BTN_Submit_Click(object sender, RoutedEventArgs e)
-        //{
-        //    var check = con.QueryAsync<ThisInsert>("exec SP_Insert_Employee @Id, @JobName, @DepartmentName, @MajorsName, @Name, @Phone, @Address, @PlaceBirth, @BirthDate, @IdentityCard, @Email, @Religion, @NPWP, @Bachelor, @University, @JoinDate",
-        //        new { Id = id.Text, JobName = jobname.Text, DepartmentName = deptname.Text, MajorsName = majorname.Text, Name = name.Text, Phone = phone.Text, Address = address.Text, PlaceBirth = placebirth.Text, BirthDate = birthdate.SelectedDate,
-        //        IdentityCard = idnumber.Text, Religion = religion.Text, Npwp = npwp.Text, Bachelor = bachelor.Text, University = university.Text}).Result.SingleOrDefault();
-        //}
+        private async void BTN_Submit_ClickAsync(object sender, RoutedEventArgs e)
+        {
+
+            var insert = await con.ExecuteAsync("exec SP_Insert_Employee @JobName, @DepartmentName, @MajorsName, @Name, @Address, @Email, @Phone, @BirthPlace, @BirthDate, @IdNumber, @Religion, @University, @Bachelor, @Password, @JoinDate",
+                new
+                {
+                    JobName = jobname.Text,
+                    DepartmentName = deptname.Text,
+                    MajorsName = majorname.Text,
+                    Name = name.Text,
+                    Email = email.Text,
+                    Address = address.Text,
+                    Phone = phone.Text,
+                    BirthPlace = birthplace.Text,
+                    BirthDate = birthdate.Text,
+                    IdNumber = idnumber.Text,
+                    Religion = religion.Text,
+                    University = university.Text,
+                    Bachelor = bachelor.Text,
+                    Password = idnumber.Text,
+                    JoinDate = DateTime.Now.Date
+                });
+        }
+
+        private void BTN_Home_Click(object sender, RoutedEventArgs e)
+        {
+            Home home = new Home(Role, User);
+            home.Show();
+            Close();
+        }
     }
 }

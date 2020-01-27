@@ -13,16 +13,16 @@ namespace Login
         public string DepartmentName { get; set; }
         public string MajorsName { get; set; }
         public string Name { get; set; }
-        public string Phone { get; set; }
         public string Address { get; set; }
-        public string PlaceBirth { get; set; }
-        public string BirthDate { get; set; }
-        public string IdentityCard { get; set; }
         public string Email { get; set; }
+        public string Phone { get; set; }
+        public string BirthPlace { get; set; }
+        public string BirthDate { get; set; }
+        public string IdNumber { get; set; }
         public string Religion { get; set; }
-        public string NPWP { get; set; }
-        public string Bachelor { get; set; }
         public string University { get; set; }
-        public string JoinDate { get; set; }
+        public string Bachelor { get; set; }
+        public DateTime JoinDate { get; set; }
+        public string Password { get; set; }
     }
 }

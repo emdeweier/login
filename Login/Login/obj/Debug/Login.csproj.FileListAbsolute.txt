@@ -20,3 +20,5 @@ F:\Bootcamp #33\git\login\Login\Login\obj\Debug\Add_Data.g.cs
 F:\Bootcamp #33\git\login\Login\Login\obj\Debug\Add_Data.baml
 F:\Bootcamp #33\git\login\Login\Login\obj\Debug\Dashboard.g.cs
 F:\Bootcamp #33\git\login\Login\Login\obj\Debug\Dashboard.baml
+F:\Bootcamp #33\git\login\Login\Login\bin\Debug\BCrypt.Net-Next.dll
+F:\Bootcamp #33\git\login\Login\Login\bin\Debug\BCrypt.Net-Next.xml

@@ -4,6 +4,8 @@ using System;
 using System.Configuration;
 using Dapper;
 using System.Linq;
+using BCrypt.Net;
+using System.Windows.Input;
 
 namespace Login
 {
@@ -20,18 +22,27 @@ namespace Login
 
         private void BTN_Login_Click(object sender, RoutedEventArgs e)
         {
-            var check = con.QueryAsync<ThisLogin>("exec SP_Retrieve_Login @Username, @Password", 
-                new { Username = email.Text, Password = password.Password }).Result.SingleOrDefault();
+            string myPw = password.Password;
+            string myHash = BCrypt.Net.BCrypt.HashPassword(myPw);
+            var check = con.QueryAsync<ThisLogin>("exec SP_Retrieve_Login @Username", 
+                new { Username = email.Text }).Result.SingleOrDefault();
+            var result = BCrypt.Net.BCrypt.Verify(myPw, check.Password);
             if (check == null)
             {
-                MessageBox.Show("Username or Password Incorrect");
+                MessageBox.Show(BCrypt.Net.BCrypt.HashPassword(password.Password));
             }
             else
             {
-                Home home = new Home();
-                var role = check.Role;
-                home.Show();
-                Close();
+                if(result == true)
+                {
+                    Home home = new Home(check.Role, check.Username);
+                    home.Show();
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Password Incorrect");
+                }
             }
         }
     }

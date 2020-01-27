@@ -20,9 +20,24 @@ namespace Login
     /// </summary>
     public partial class Dashboard : UserControl
     {
-        public Dashboard()
+        public Dashboard(string RoleVal, string UserVal)
         {
+            string Role = RoleVal;
+            string User = UserVal;
             InitializeComponent();
+            if (Role == "admin")
+            {
+                BTN_MngUser.Visibility = Visibility.Visible;
+                BTN_MngBch.Visibility = Visibility.Visible;
+                BTN_MngDept.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                BTN_MngUser.Visibility = Visibility.Hidden;
+                BTN_MngBch.Visibility = Visibility.Hidden;
+                BTN_MngDept.Visibility = Visibility.Hidden;
+            }
+            Username.Text = "Welcome, " + User;
         }
     }
 }

@@ -61,7 +61,7 @@ namespace Login {
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.0.0.0")]
         public static void Main() {
-            global::Login.App app = new global::Login.App();
+            Login.App app = new Login.App();
             app.InitializeComponent();
             app.Run();
         }

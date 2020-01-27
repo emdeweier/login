@@ -5,40 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Login"
         mc:Ignorable="d"
-        Title="Add_Data" Height="1000" Width="430" WindowStyle="None" ResizeMode="NoResize">
+        Title="Add_Data" Height="400" Width="800" WindowStyle="None" ResizeMode="NoResize">
     <Grid Background="#FFBDCEC4">
-        <Button Content="LOGOUT" Name="BTN_Logout" HorizontalAlignment="Center" Margin="290,10,0,0" Background="#FF3B3C20" Foreground="White" VerticalAlignment="Top" Width="110" Height="30" FontSize="16" BorderBrush="{x:Null}"/>
-        <Label Content="Job Name" HorizontalAlignment="Center" Margin="0,50,190,0" VerticalAlignment="Top" Height="40" Width="115" FontSize="20" FontWeight="Medium" Foreground="#FF2A2B20"/>
-        <TextBox HorizontalAlignment="Center" Name="jobname" Height="25" Margin="0,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" VerticalContentAlignment="Center"/>
-        <Label Content="Department Name" HorizontalAlignment="Center" Margin="0,100,185,0" VerticalAlignment="Top" Height="40" Width="125" FontSize="20" FontWeight="Medium" Foreground="#FF2A2B20"/>
-        <TextBox HorizontalAlignment="Center" Name="deptname" Height="25" Margin="0,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" VerticalContentAlignment="Center"/>
-        <Label Content="Major Name" HorizontalAlignment="Center" Margin="0,150,185,0" VerticalAlignment="Top" Height="40" Width="125" FontSize="20" FontWeight="Medium" Foreground="#FF2A2B20"/>
-        <TextBox HorizontalAlignment="Center" Name="majorname" Height="25" Margin="0,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" VerticalContentAlignment="Center"/>
-        <Label Content="Name" HorizontalAlignment="Center" Margin="0,200,185,0" VerticalAlignment="Top" Height="40" Width="125" FontSize="20" FontWeight="Medium" Foreground="#FF2A2B20"/>
-        <TextBox HorizontalAlignment="Center" Name="name" Height="25" Margin="0,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" VerticalContentAlignment="Center"/>
-        <Label Content="Phone" HorizontalAlignment="Center" Margin="0,250,185,0" VerticalAlignment="Top" Height="40" Width="125" FontSize="20" FontWeight="Medium" Foreground="#FF2A2B20"/>
-        <TextBox HorizontalAlignment="Center" Name="phone" Height="25" Margin="0,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" VerticalContentAlignment="Center"/>
-        <Label Content="Address" HorizontalAlignment="Center" Margin="0,300,185,0" VerticalAlignment="Top" Height="40" Width="125" FontSize="20" FontWeight="Medium" Foreground="#FF2A2B20"/>
-        <TextBox HorizontalAlignment="Center" Name="address" Height="25" Margin="0,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" VerticalContentAlignment="Center"/>
-        <Label Content="Place Birth" HorizontalAlignment="Center" Margin="0,350,185,0" VerticalAlignment="Top" Height="40" Width="125" FontSize="20" FontWeight="Medium" Foreground="#FF2A2B20"/>
-        <TextBox HorizontalAlignment="Center" Name="placebirth" Height="25" Margin="0,380,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" VerticalContentAlignment="Center"/>
-        <Label Content="Birth Date" HorizontalAlignment="Center" Margin="0,400,185,0" VerticalAlignment="Top" Height="40" Width="125" FontSize="20" FontWeight="Medium" Foreground="#FF2A2B20"/>
-        <DatePicker HorizontalAlignment="Center" Name="birthdate" Margin="0,430,180,0" VerticalAlignment="Top" Width="125" Height="40" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" BorderBrush="{x:Null}"/>
-        <Label Content="Id Number" HorizontalAlignment="Center" Margin="0,460,185,0" VerticalAlignment="Top" Height="40" Width="125" FontSize="20" FontWeight="Medium" Foreground="#FF2A2B20"/>
-        <TextBox HorizontalAlignment="Center" Name="idnumber" Height="25" Margin="0,490,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" VerticalContentAlignment="Center"/>
-        <Label Content="Religion" HorizontalAlignment="Center" Margin="0,510,185,0" VerticalAlignment="Top" Height="40" Width="125" FontSize="20" FontWeight="Medium" Foreground="#FF2A2B20"/>
-        <TextBox HorizontalAlignment="Center" Name="religion" Height="25" Margin="0,540,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" VerticalContentAlignment="Center"/>
-        <Label Content="NPWP" HorizontalAlignment="Center" Margin="0,560,185,0" VerticalAlignment="Top" Height="40" Width="125" FontSize="20" FontWeight="Medium" Foreground="#FF2A2B20"/>
-        <TextBox HorizontalAlignment="Center" Name="npwp" Height="25" Margin="0,590,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" VerticalContentAlignment="Center"/>
-        <Label Content="Bachelor" HorizontalAlignment="Center" Margin="0,610,185,0" VerticalAlignment="Top" Height="40" Width="125" FontSize="20" FontWeight="Medium" Foreground="#FF2A2B20"/>
-        <TextBox HorizontalAlignment="Center" Name="bachelor" Height="25" Margin="0,640,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" VerticalContentAlignment="Center"/>
-        <Label Content="University" HorizontalAlignment="Center" Margin="0,660,185,0" VerticalAlignment="Top" Height="40" Width="125" FontSize="20" FontWeight="Medium" Foreground="#FF2A2B20"/>
-        <TextBox HorizontalAlignment="Center" Name="university" Height="25" Margin="0,690,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" VerticalContentAlignment="Center"/>
-        <Label Content="Join Date" HorizontalAlignment="Center" Margin="0,710,185,0" VerticalAlignment="Top" Height="40" Width="125" FontSize="20" FontWeight="Medium" Foreground="#FF2A2B20"/>
-        <DatePicker HorizontalAlignment="Center" Name="joindate" Margin="0,740,180,0" VerticalAlignment="Top" Width="125" Height="40" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" BorderBrush="{x:Null}"/>
-        <Label Content="ID" HorizontalAlignment="Center" Margin="0,770,185,0" VerticalAlignment="Top" Height="40" Width="125" FontSize="20" FontWeight="Medium" Foreground="#FF2A2B20"/>
-        <TextBox HorizontalAlignment="Center" Name="id" Height="25" Margin="0,800,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" VerticalContentAlignment="Center"/>
-        <Button Content="SUBMIT" Name="BTN_Submit" HorizontalAlignment="Center" Margin="0,0,190,140" Background="#FF3B3C20" Foreground="White" VerticalAlignment="Bottom" Width="110" Height="30" FontSize="16" BorderBrush="{x:Null}"/>
+        <Rectangle Fill="#FF2a2b20" HorizontalAlignment="Center" Height="50" Margin="0,0,0,0" VerticalAlignment="Top" Width="800" Stroke="#FF2A2b20"/>
+        <Rectangle Fill="#FF9EC5A3" HorizontalAlignment="Left" Height="350" Margin="0,50,0,0" VerticalAlignment="Top" Width="170" Stroke="#FF9EC5A3"/>
+        <Button Content="LOGOUT" Name="BTN_Logout" HorizontalAlignment="Center" Margin="680,10,10,360" Foreground="White" VerticalAlignment="Center" Width="110" Height="30" FontSize="16" BorderBrush="{x:Null}" Background="{x:Null}"/>
+        <Label Content="Job Name" HorizontalAlignment="Center" Margin="0,50,325,0" VerticalAlignment="Top" Height="40" Width="115" FontSize="20" FontWeight="Medium" Foreground="#FF2A2B20"/>
+        <TextBox HorizontalAlignment="Center" Name="jobname" Height="25" Margin="0,80,235,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" VerticalContentAlignment="Center"/>
+        <Label Content="Department Name" HorizontalAlignment="Center" Margin="0,100,320,0" VerticalAlignment="Top" Height="40" Width="125" FontSize="20" FontWeight="Medium" Foreground="#FF2A2B20"/>
+        <TextBox HorizontalAlignment="Center" Name="deptname" Height="25" Margin="0,130,235,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" VerticalContentAlignment="Center"/>
+        <Label Content="Major Name" HorizontalAlignment="Center" Margin="0,150,320,0" VerticalAlignment="Top" Height="40" Width="125" FontSize="20" FontWeight="Medium" Foreground="#FF2A2B20"/>
+        <TextBox HorizontalAlignment="Center" Name="majorname" Height="25" Margin="0,180,235,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" VerticalContentAlignment="Center"/>
+        <Label Content="Name" HorizontalAlignment="Center" Margin="0,200,320,0" VerticalAlignment="Top" Height="40" Width="125" FontSize="20" FontWeight="Medium" Foreground="#FF2A2B20"/>
+        <TextBox HorizontalAlignment="Center" Name="name" Height="25" Margin="0,230,235,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" VerticalContentAlignment="Center"/>
+        <Label Content="Email" HorizontalAlignment="Center" Margin="0,250,320,0" VerticalAlignment="Top" Height="40" Width="125" FontSize="20" FontWeight="Medium" Foreground="#FF2A2B20"/>
+        <TextBox HorizontalAlignment="Center" Name="email" Height="25" Margin="0,280,235,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" VerticalContentAlignment="Center"/>
+        <Label Content="Address" HorizontalAlignment="Center" Margin="0,300,315,0" VerticalAlignment="Top" Height="40" Width="125" FontSize="20" FontWeight="Medium" Foreground="#FF2A2B20"/>
+        <TextBox HorizontalAlignment="Center" Name="address" Height="25" Margin="0,330,235,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" VerticalContentAlignment="Center"/>
+        <Rectangle Fill="#FF2a2b20" HorizontalAlignment="Center" Height="360" Margin="0,0,10,0" Stroke="#FF2A2b20" VerticalAlignment="Top" Width="5"/>
+        <Label Content="Phone" HorizontalAlignment="Center" Margin="125,50,0,0" VerticalAlignment="Top" Height="40" Width="115" FontSize="20" FontWeight="Medium" Foreground="#FF2A2B20"/>
+        <TextBox HorizontalAlignment="Center" Name="phone" Height="25" Margin="220,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" VerticalContentAlignment="Center"/>
+        <Label Content="Birth Place" HorizontalAlignment="Center" Margin="130,100,0,0" VerticalAlignment="Top" Height="40" Width="125" FontSize="20" FontWeight="Medium" Foreground="#FF2A2B20"/>
+        <TextBox HorizontalAlignment="Center" Name="birthplace" Height="25" Margin="220,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" VerticalContentAlignment="Center"/>
+        <Label Content="Birth Date" HorizontalAlignment="Center" Margin="135,150,0,0" VerticalAlignment="Top" Height="40" Width="125" FontSize="20" FontWeight="Medium" Foreground="#FF2A2B20"/>
+        <TextBox HorizontalAlignment="Center" Name="birthdate" Height="25" Margin="220,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" VerticalContentAlignment="Center"/>
+        <Label Content="Id Number" HorizontalAlignment="Center" Margin="135,200,0,0" VerticalAlignment="Top" Height="40" Width="125" FontSize="20" FontWeight="Medium" Foreground="#FF2A2B20"/>
+        <TextBox HorizontalAlignment="Center" Name="idnumber" Height="25" Margin="220,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" VerticalContentAlignment="Center"/>
+        <Label Content="Religion" HorizontalAlignment="Center" Margin="135,250,0,0" VerticalAlignment="Top" Height="40" Width="125" FontSize="20" FontWeight="Medium" Foreground="#FF2A2B20"/>
+        <TextBox HorizontalAlignment="Center" Name="religion" Height="25" Margin="220,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" VerticalContentAlignment="Center"/>
+        <Label Content="University" HorizontalAlignment="Center" Margin="135,300,0,0" VerticalAlignment="Top" Height="40" Width="125" FontSize="20" FontWeight="Medium" Foreground="#FF2A2B20"/>
+        <TextBox HorizontalAlignment="Center" Name="university" Height="25" Margin="220,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" VerticalContentAlignment="Center"/>
+        <Label Content="Bachelor" HorizontalAlignment="Center" Margin="560,50,0,0" VerticalAlignment="Top" Height="40" Width="115" FontSize="20" FontWeight="Medium" Foreground="#FF2A2B20"/>
+        <TextBox HorizontalAlignment="Center" Name="bachelor" Height="25" Margin="620,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" VerticalContentAlignment="Center"/>
+        <Rectangle Fill="#FF2a2b20" HorizontalAlignment="Center" Height="360" Margin="450,0,10,0" Stroke="#FF2A2b20" VerticalAlignment="Top" Width="5"/>
+        <Button Content="SUBMIT" Name="BTN_Submit" HorizontalAlignment="Center" Margin="680,0,10,40" Background="#FF3B3C20" Foreground="White" VerticalAlignment="Bottom" Width="110" Height="30" FontSize="16" BorderBrush="{x:Null}" Click="BTN_Submit_ClickAsync"/>
+        <Button Content="HOME" Name="BTN_Home" HorizontalAlignment="Left" Margin="10,0,0,100" VerticalAlignment="Center" Width="145" Height="25" BorderBrush="{x:Null}" Background="#FF3B3C20" Foreground="White" Click="BTN_Home_Click"/>
+        <Button Content="PROFILE" Name="BTN_Profile" HorizontalAlignment="Left" Margin="10,0,0,40" VerticalAlignment="Center" Width="145" Height="25" BorderBrush="{x:Null}" Background="#FF3B3C20" Foreground="White"/>
+        <Button Content="ADD DATA" Name="BTN_Add_Data" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Center" Width="145" Height="25" BorderBrush="{x:Null}" Background="#FF3B3C20" Foreground="White"/>
+        <Button Content="MANAGE DATA" Name="BTN_MngData" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Center" Width="145" Height="25" BorderBrush="{x:Null}" Background="#FF3B3C20" Foreground="White"/>
         <TextBlock HorizontalAlignment="Center" Margin="0,0,0,10" TextWrapping="Wrap" Text="Developed by #bapaknyajono" VerticalAlignment="Bottom" FontSize="10" FontWeight="Medium"/>
     </Grid>
 </Window>

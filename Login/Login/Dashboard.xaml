@@ -5,12 +5,26 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Login"
              mc:Ignorable="d" 
-             d:DesignHeight="400" d:DesignWidth="600">
+             d:DesignHeight="400" d:DesignWidth="800">
     <Grid Background="#FFBDCEC4">
-        <Rectangle Fill="#FF2a2b20" HorizontalAlignment="Center" Height="50" Margin="0,0,0,0" VerticalAlignment="Top" Width="600" Stroke="#FF2A2b20"/>
-        <Rectangle Fill="#FF9EC5A3" HorizontalAlignment="Left" Height="350" Margin="0,50,0,0" VerticalAlignment="Top" Width="170" Stroke="#FF9EC5A3"/>
-        <Button Content="Profile" HorizontalAlignment="Left" Margin="30,150,0,0" VerticalAlignment="Top" Width="105" Height="25" Background="#FF3B3C30" Foreground="#FFBDCEC4" BorderBrush="#FF3B3C30"/>
-        <Button Content="Insert Data" HorizontalAlignment="Left" Margin="30,180,0,0" VerticalAlignment="Top" Width="105" Height="25" Background="#FF3B3C30" Foreground="#FFBDCEC4" BorderBrush="#FF3B3C30"/>
-        <Button Content="View Data" HorizontalAlignment="Left" Margin="30,210,0,0" VerticalAlignment="Top" Width="105" Height="25" Background="#FF3B3C30" Foreground="#FFBDCEC4" BorderBrush="#FF3B3C30"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="340"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Rectangle Fill="#FF2A2B20" HorizontalAlignment="Center" Height="60" Margin="0,0,0,0" VerticalAlignment="Top" Width="800"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="180"></ColumnDefinition>
+                <ColumnDefinition Width="620"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBox HorizontalAlignment="Right" Height="25" Name="Username" Margin="0,15,30,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <Rectangle Fill="#FF9EC5A3" HorizontalAlignment="Left" Height="340" Margin="0,60,0,0" VerticalAlignment="Top" Width="175"/>
+            <Button Content="Home" Name="BTN_Home" HorizontalAlignment="Left" Margin="25,0,0,100" VerticalAlignment="Center" Width="125" Height="25" BorderBrush="{x:Null}" Background="#FF3B3C20" Foreground="White"/>
+            <Button Content="Profile" Name="BTN_Profile" HorizontalAlignment="Left" Margin="25,0,0,40" VerticalAlignment="Center" Width="125" Height="25" BorderBrush="{x:Null}" Background="#FF3B3C20" Foreground="White"/>
+            <Button Content="Manage User" Name="BTN_MngUser" HorizontalAlignment="Left" Margin="25,20,0,0" VerticalAlignment="Center" Width="125" Height="25" BorderBrush="{x:Null}" Background="#FF3B3C20" Foreground="White"/>
+            <Button Content="Manage Bachelor" Name="BTN_MngBch" HorizontalAlignment="Left" Margin="25,80,0,0" VerticalAlignment="Center" Width="125" Height="25" BorderBrush="{x:Null}" Background="#FF3B3C20" Foreground="White"/>
+            <Button Content="Manage Department" Name="BTN_MngDept" HorizontalAlignment="Left" Margin="25,140,0,0" VerticalAlignment="Center" Width="125" Height="25" BorderBrush="{x:Null}" Background="#FF3B3C20" Foreground="White"/>
+            <TextBlock HorizontalAlignment="Left" Margin="50,350,0,0" TextWrapping="Wrap" Text="#bapaknyajono" VerticalAlignment="Center" FontSize="10" FontWeight="Medium"/>
+        </Grid>
     </Grid>
 </UserControl>
